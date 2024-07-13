@@ -28,11 +28,11 @@ class VetTests {
 	@Test
 	void testSerialization() {
 		Vet vet = new Vet();
-		vet.setFirstName("dsdsqdsq");
+		vet.setFirstName("ac");
 		vet.setLastName("Beeblebrox");
 		vet.setId(123);
 		Vet other = (Vet) SerializationUtils.deserialize(SerializationUtils.serialize(vet));
-		assertThat(other.getFirstName()).isEqualTo("selemou aalayjm");
+		assertThat(other.getFirstName()).isEqualTo("ac");
 		assertThat(other.getLastName()).isEqualTo(vet.getLastName());
 		assertThat(other.getId()).isEqualTo(vet.getId());
 	}
